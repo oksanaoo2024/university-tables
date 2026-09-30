@@ -1,0 +1,320 @@
+```html
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Університет — сутності</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        /* Таби */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tab-button {
+            padding: 12px 25px;
+            border: none;
+            background-color: #dfe6e9;
+            color: #2d3436;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .tab-button:hover {
+            background-color: #b2bec3;
+        }
+
+        .tab-button.active {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* Вміст таблиць */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            border: 1px solid #2980b9;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #eaf4fc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Предметна область: «Університет»</h1>
+
+    <!-- Кнопки табів -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('students', this)">
+            Студенти
+        </button>
+
+        <button class="tab-button" onclick="openTab('teachers', this)">
+            Викладачі
+        </button>
+
+        <button class="tab-button" onclick="openTab('subjects', this)">
+            Предмети
+        </button>
+    </div>
+
+    <!-- Таблиця студентів -->
+    <div id="students" class="tab-content active">
+
+        <h2>Сутність «Студенти»</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ПІБ</th>
+                    <th>Дата народження</th>
+                    <th>Група</th>
+                    <th>Курс</th>
+                    <th>Спеціальність</th>
+                    <th>Середній бал</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Іваненко Олександр</td>
+                    <td>15.04.2005</td>
+                    <td>КН-21</td>
+                    <td>3</td>
+                    <td>Комп'ютерні науки</td>
+                    <td>91</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Петренко Марія</td>
+                    <td>22.09.2005</td>
+                    <td>КН-21</td>
+                    <td>3</td>
+                    <td>Комп'ютерні науки</td>
+                    <td>95</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Шевченко Андрій</td>
+                    <td>10.01.2006</td>
+                    <td>КН-22</td>
+                    <td>2</td>
+                    <td>Інженерія програмного забезпечення</td>
+                    <td>87</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!-- Таблиця викладачів -->
+    <div id="teachers" class="tab-content">
+
+        <h2>Сутність «Викладачі»</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ПІБ</th>
+                    <th>Посада</th>
+                    <th>Кафедра</th>
+                    <th>Предмет</th>
+                    <th>Стаж</th>
+                    <th>Ставка</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Коваленко Ірина Петрівна</td>
+                    <td>Доцент</td>
+                    <td>Комп'ютерних наук</td>
+                    <td>Бази даних</td>
+                    <td>12 років</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Мельник Олег Васильович</td>
+                    <td>Старший викладач</td>
+                    <td>Програмування</td>
+                    <td>Вебтехнології</td>
+                    <td>8 років</td>
+                    <td>1.0</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Бондаренко Наталія Ігорівна</td>
+                    <td>Професор</td>
+                    <td>Інформаційних систем</td>
+                    <td>Алгоритми</td>
+                    <td>20 років</td>
+                    <td>0.75</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!-- Таблиця предметів -->
+    <div id="subjects" class="tab-content">
+
+        <h2>Сутність «Предмети»</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Назва предмета</th>
+                    <th>Кількість годин</th>
+                    <th>Кредити ECTS</th>
+                    <th>Семестр</th>
+                    <th>Вид контролю</th>
+                    <th>Викладач</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Бази даних</td>
+                    <td>120</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>Іспит</td>
+                    <td>Коваленко І.П.</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Вебтехнології</td>
+                    <td>90</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>Залік</td>
+                    <td>Мельник О.В.</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Алгоритми</td>
+                    <td>150</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>Іспит</td>
+                    <td>Бондаренко Н.І.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+
+<script>
+    function openTab(tabName, button) {
+
+        // Приховуємо всі таблиці
+        const contents = document.querySelectorAll('.tab-content');
+
+        contents.forEach(function(content) {
+            content.classList.remove('active');
+        });
+
+        // Прибираємо active з усіх кнопок
+        const buttons = document.querySelectorAll('.tab-button');
+
+        buttons.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+
+        // Показуємо вибрану таблицю
+        document.getElementById(tabName).classList.add('active');
+
+        // Робимо кнопку активною
+        button.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
+```
