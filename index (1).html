@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Університет — таблиці сутностей</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">Завдання №1</p>
+      <h1>Інформаційна система університету</h1>
+      <p class="subtitle">Приклад динамічного відображення даних за допомогою JavaScript</p>
+    </header>
+
+    <nav class="tabs" aria-label="Вибір сутності">
+      <button class="tab active" data-target="students" aria-selected="true">Студенти</button>
+      <button class="tab" data-target="teachers" aria-selected="false">Викладачі</button>
+      <button class="tab" data-target="courses" aria-selected="false">Дисципліни</button>
+    </nav>
+
+    <section class="table-panel active" id="students">
+      <div class="panel-heading">
+        <div>
+          <h2>Студенти</h2>
+          <p>Атрибути: ID, ПІБ, група, спеціальність, курс, середній бал, електронна пошта.</p>
+        </div>
+        <span class="count" id="students-count"></span>
+      </div>
+      <div class="table-wrap"><table><thead id="students-head"></thead><tbody id="students-body"></tbody></table></div>
+    </section>
+
+    <section class="table-panel" id="teachers">
+      <div class="panel-heading">
+        <div>
+          <h2>Викладачі</h2>
+          <p>Атрибути: ID, ПІБ, кафедра, посада, науковий ступінь, дисципліна, електронна пошта.</p>
+        </div>
+        <span class="count" id="teachers-count"></span>
+      </div>
+      <div class="table-wrap"><table><thead id="teachers-head"></thead><tbody id="teachers-body"></tbody></table></div>
+    </section>
+
+    <section class="table-panel" id="courses">
+      <div class="panel-heading">
+        <div>
+          <h2>Дисципліни</h2>
+          <p>Атрибути: ID, назва, кредити, семестр, форма контролю, викладач, кількість годин.</p>
+        </div>
+        <span class="count" id="courses-count"></span>
+      </div>
+      <div class="table-wrap"><table><thead id="courses-head"></thead><tbody id="courses-body"></tbody></table></div>
+    </section>
+
+    <footer>Демонстраційні дані. Усі записи в таблицях створюються JavaScript.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
